@@ -13,7 +13,8 @@ app.use(express.urlencoded({extended: true}));
 app.get('/login/:usuario/:senha',async (req, res)=>{
     const { usuario, senha } = req.params
     try{
-            const consulta = await sql`select * from login where usuario = ${usuario} and senha = ${senha};`
+        
+        const consulta = await sql`select * from login where usuario = ${usuario} and senha = ${senha};`
         if(consulta != null && consulta != ''){
             return res.status(200).json(consulta)
         }

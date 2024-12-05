@@ -22,32 +22,43 @@ closeButtons.forEach((button)=>{
 })
 
 
+document.querySelector('#cadastrar').addEventListener('click', async function(event){
+  event.preventDefault(); // Impede o envio do formulário
 
-const email = document.querySelector('#email').value;
+const dominio = document.querySelector('#dominio').value;
+const reino = document.querySelector('#reino').value;
+const filo = document.querySelector('#filo').value;
+const classe = document.querySelector('#classe').value;
+const origem = document.querySelector('#origem').value;
+const familia = document.querySelector('#familia').value;
+const genero = document.querySelector('#genero').value;
+const especie = document.querySelector('#especie').value;
 const nome = document.querySelector('#nome').value;
 
-const res = await fetch('http://192.168.1.27:3000/usuario/novo',{
+
+const res = await fetch('http://192.168.1.17:3000/informacoes/plantas',{
     method: "POST",
     headers: {
         "Content-Type": "application/json" // Adiciona o cabeçalho correto
     },
     body: JSON.stringify({
-        email: email,
-        senha: senha,
-        nome_usuario: nome
+        dominio: dominio,
+        reino: reino,
+        filo: filo,
+        classe: classe,
+        origem: origem,
+        familia: familia,
+        genero: genero,
+        especie: especie,
+        nome: nome
     })
 });
 
-
 if(res.status == 200){
-  alert('Cadastrado com sucesso')
+  alert('Arvore adicionada com sucesso')
 }
 else if(res.status == 500){
-  alert('Ops...houve um erro ao cadastrar')
+  alert('Ops...houve um erro ao adicionar')
 }
-else  if(res.status == 400){
-  alert('Senha deve ter 8 caracteres!')
-}
-else  if(res.status == 409){
-  alert('Email ja cadastrado')
-}
+
+})
