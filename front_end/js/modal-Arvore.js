@@ -36,7 +36,11 @@ const especie = document.querySelector('#especie').value;
 const nome = document.querySelector('#nome').value;
 
 
+<<<<<<< HEAD:front_end/js/modal-Arvore.js
 const res = await fetch('http://localhost:3000/informacoes/plantas',{
+=======
+const res = await fetch('http://192.168.1.17:3000/informacoes/plantas',{
+>>>>>>> bec1151458477026f5aa5b89957c7864b9f20169:modal.js
     method: "POST",
     headers: {
         "Content-Type": "application/json" // Adiciona o cabeçalho correto
