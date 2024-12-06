@@ -1,248 +1,337 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"); /* Importa a fonte "Quicksand" do Google Fonts */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Remove as margens padrão de todos os elementos */
+    padding: 0; /* Remove os paddings padrão de todos os elementos */
+    box-sizing: border-box; /* Define o modelo de box para incluir border e padding no tamanho total */
 }
 
 body, html {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 100%;
-    background: #222431;
-    background-image: url(../img/DeWatermark.ai_1729264457281.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-x: hidden;
+    display: flex; /* Define um container flexível */
+    justify-content: center; /* Alinha o conteúdo ao centro horizontalmente */
+    align-items: center; /* Alinha o conteúdo ao centro verticalmente */
+    min-height: 100vh; /* Define a altura mínima como 100% da altura da tela */
+    width: 100%; /* Define a largura como 100% */
+    background: #222431; /* Define uma cor de fundo */
+    overflow-x: hidden; /* Remove a rolagem horizontal */
 }
 
 a {
-    text-decoration: none;
-    color: white;
+    text-decoration: none; /* Remove o sublinhado de links */
+    color: white; /* Define a cor dos links como branca */
 }
 
 ul li {
-    list-style-type: none;
+    list-style-type: none; /* Remove os marcadores de lista */
 }
 
 .main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100vh;
+    display: grid; /* Define um layout de grade */
+    grid-template-columns: 1fr; /* Uma coluna de tamanho flexível */
+    grid-template-rows: 100vh; /* Define uma linha com altura igual à altura da tela */
 }
 
 .section1 {
-    display: grid;
-    grid-template-rows: 130px 1fr;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/caminho/para/sua/imagem-de-fundo.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+    display: grid; /* Define um layout de grade */
+    grid-template-rows: 130px 1fr; /* Cria duas linhas: uma com 130px e outra flexível */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/img/fundo-home.png); /* Adiciona gradiente e imagem de fundo */
+    background-size: cover; /* Faz com que a imagem de fundo cubra toda a área */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Impede que a imagem de fundo se repita */
+    height: 100vh; /* Define a altura como 100% da tela */
+    width: 100vw; /* Define a largura como 100% da janela */
+    overflow: hidden; /* Oculta conteúdos que ultrapassam os limites */
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Define um container flexível */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
 }
 
-.header .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 1.5em;
-    width: 5.5em;
-    margin-left: 3%;
-    margin-top: 1em;
-    font-size: 2em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: 0.2em;
-    color: rgb(255, 255, 255);
-    border: solid cyan 4px;
-    border-radius: 5px;
-    cursor: pointer;
+img{
+    height: 200px; /* Define a altura do elemento */
+    width: 200px; /* Define a largura do elemento */
+    margin-left: 3%; /* Adiciona uma margem à esquerda */
+    margin-top: 2em; /* Adiciona uma margem ao topo */
 }
-
 .header .btn-transparent {
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
-    padding: 8px 15px;
-    border-radius: 25px;
-    transition: all 0.3s ease;
+    background-color: transparent; /* Define o fundo transparente */
+    color: white; /* Define a cor do texto como branca */
+    font-family: 'Quicksand', sans-serif; /* Define a família da fonte */
+    font-weight: 600; /* Define o peso da fonte */
+    padding: 8px 15px; /* Adiciona padding interno */
+    border-radius: 25px; /* Arredonda os cantos do botão */
+    transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades */
 }
 
 .header .btn-transparent:hover {
-    background-color: white;
-    color: #222431;
+    background-color: white; /* Muda a cor de fundo ao passar o mouse */
+    color: #222431; /* Muda a cor do texto ao passar o mouse */
 }
 
 .hero-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    display: grid; /* Define um layout de grade */
+    grid-template-columns: 1fr 1fr; /* Cria duas colunas de tamanhos iguais */
+    grid-template-rows: 1fr; /* Define uma linha flexível */
 }
 
 .hero-main .hero-contents {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 700px;
-    height: 700px;
-    margin-left: 80px;
-    margin-top: 30px;
-    animation: popup 2s;
+    display: flex; /* Define um container flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    width: 700px; /* Define a largura */
+    height: 700px; /* Define a altura */
+    margin-left: 80px; /* Adiciona uma margem à esquerda */
+    margin-top: 30px; /* Adiciona uma margem ao topo */
+    animation: popup 2s; /* Aplica uma animação chamada "popup" com duração de 2s */
 }
 
 @keyframes popup {
     from {
-        transform: translateY(100px);
+        transform: translateY(100px); /* Inicia movendo o elemento 100px para baixo */
     }
     to {
-        transform: translateY(0px);
+        transform: translateY(0px); /* Finaliza o elemento na posição original */
     }
 }
 
 .hero-img-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 120px;
-    background-color: transparent;
-    color: white;
-    border: solid white;
-    cursor: pointer;
+    display: flex; /* Define um container flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    width: 125px; /* Define a largura */
+    background-color: transparent; /* Define o fundo transparente */
+    color: white; /* Define a cor do texto como branca */
+    border: solid white; /* Adiciona uma borda branca */
+    cursor: pointer; /* Define o cursor como "mão" ao passar sobre o elemento */
+    border-radius: 5px;
 }
 
 .hero-img-btn:hover {
-    background-color: darkblue;
-    color: white;
+    background-color: white; /* Muda o fundo para azul escuro ao passar o mouse */
+    color: rgb(0, 0, 0); /* Mantém o texto branco ao passar o mouse */
 }
 
 .brandName {
-    font-size: 100px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, cursive;
-    font-weight: 900;
-    color: white;
+    font-size: 100px; /* Define o tamanho da fonte como 100px */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, cursive; /* Define a família da fonte */
+    font-weight: 900px; /* Define a espessura da fonte como muito grossa */
+    color: white; /* Define a cor do texto como branca */
 }
 
 .hero-text {
-    margin-top: -60px;
-    margin-bottom: 20px;
-    color: white;
+    margin-top: 10px; /* Move o texto para cima usando margem negativa */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
+    color: white; /* Define a cor do texto como branca */
+    font-size: 20px;
 }
 
 /* Estilo do Modal */
+
 .modal-content {
-    display: flex;
-    flex-direction: row;
-    border: none;
-    border-radius: 20px;
-    overflow: hidden;
-    width: 800px;
-    max-width: 95%;
-    min-height: 600px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 0.3s ease;
-    font-family: 'Quicksand', sans-serif;
+    display: flex; /* Define um container flexível */
+    flex-direction: row; /* Organiza os itens em linha horizontal */
+    border: none; /* Remove qualquer borda do elemento */
+    border-radius: 20px; /* Arredonda os cantos com 20px */
+    overflow: hidden; /* Oculta conteúdo que ultrapassa os limites */
+    width: 800px; /* Define a largura do modal como 800px */
+    max-width: 95%; /* Define a largura máxima como 95% da tela */
+    min-height: 600px; /* Define a altura mínima do modal como 600px */
+    background-color: rgba(255, 255, 255, 0.9); /* Aplica um fundo branco com opacidade de 90% */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao redor do modal */
+    animation: fadeIn 0.3s ease; /* Aplica a animação "fadeIn" com duração de 0.3s */
+    font-family: 'Quicksand', sans-serif; /* Define a família da fonte */
 }
 
 @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: scale(0.9);
+        opacity: 0; /* Inicia com o modal invisível */
+        transform: scale(0.9); /* Começa com o modal ligeiramente reduzido */
     }
     to {
-        opacity: 1;
-        transform: scale(1);
+        opacity: 1; /* Torna o modal completamente visível */
+        transform: scale(1); /* Finaliza com o modal em tamanho normal */
     }
 }
 
 .modal-side-image {
-    flex: 1;
-    background-image: url('https://png.pngtree.com/png-clipart/20240709/original/pngtree-cute-cartoon-capybara-wearing-cloth-vector-png-image_15523167.png'); /* Caminho ajustado para o mesmo diretório */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.8;
-    border-radius: 20px 0 0 20px;
+    flex: 1; /* Faz com que o elemento ocupe o mesmo espaço que seus irmãos flexíveis */
+    background-image: url('https://png.pngtree.com/png-clipart/20240709/original/pngtree-cute-cartoon-capybara-wearing-cloth-vector-png-image_15523167.png'); /* Define a imagem de fundo do lado do modal */
+    background-size: cover; /* Faz a imagem de fundo cobrir todo o espaço */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Impede que a imagem de fundo se repita */
+    opacity: 0.8; /* Define a opacidade da imagem */
+    border-radius: 20px 0 0 20px; /* Arredonda os cantos esquerdos do modal */
 }
 
 .modal-image {
-    flex: 1;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  #loginModal .modal-image {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxXCBooVIMtiKMa71qNrJq74BWdoDfZt1zk0LZm1vStd7DIY2w60P-u0t7bH0-w9ikJ8U&usqp=CAU');
-  }
-  
-  #cadastrarContaModal .modal-image {
-    background-image: url('../img/modal-image.jpg');
-  }
-  
+    flex: 1; /* Faz com que o elemento ocupe o mesmo espaço que seus irmãos flexíveis */
+    background-size: cover; /* Faz a imagem de fundo cobrir todo o espaço */
+    background-position: center; /* Centraliza a imagem de fundo */
+}
 
+#loginModal .modal-image {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxXCBooVIMtiKMa71qNrJq74BWdoDfZt1zk0LZm1vStd7DIY2w60P-u0t7bH0-w9ikJ8U&usqp=CAU'); /* Define a imagem de fundo para o modal de login */
+}
+
+#cadastrarContaModal .modal-image {
+    background-image: url('/img/capivara.jpg'); /* Define a imagem de fundo para o modal de cadastro */
+}
 
 .modal-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 2rem; /* Define o tamanho da fonte como 2rem */
+    font-weight: bold; /* Define o texto como negrito */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
+    color: #333; /* Define a cor do texto como cinza escuro */
 }
+
 .modal-form .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Adiciona uma margem inferior para cada grupo de formulários */
 }
 
 .modal-form .form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    width: 100%; /* Faz o controle ocupar toda a largura do container */
+    padding: 10px; /* Adiciona espaçamento interno de 10px */
+    border: 1px solid #ddd; /* Adiciona uma borda cinza clara */
+    border-radius: 5px; /* Arredonda os cantos da borda */
 }
 
 .modal-form .btn-primary {
-    background-color: #2ecc71;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #2ecc71; /* Define a cor do fundo como verde */
+    border: none; /* Remove bordas */
+    padding: 10px 15px; /* Adiciona espaçamento interno */
+    font-size: 1rem; /* Define o tamanho da fonte */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    color: white; /* Define a cor do texto como branca */
+    cursor: pointer; /* Muda o cursor para "mão" ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
 }
 
 .modal-form .btn-primary:hover {
-    background-color: #27ae60;
+    background-color: #27ae60; /* Altera a cor do fundo ao passar o mouse */
 }
 
 .modal-form .form-links {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    display: flex; /* Define um container flexível */
+    justify-content: space-between; /* Distribui os links com espaço entre eles */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
 }
 
 .modal-form .form-links a {
-    font-size: 0.9rem;
-    color: #3498db;
-    text-decoration: none;
+    font-size: 0.9rem; /* Define o tamanho da fonte como 0.9rem */
+    color: #3498db; /* Define a cor do texto como azul */
+    text-decoration: none; /* Remove o sublinhado dos links */
 }
 
 .modal-form .form-links a.register-link {
-    color: #2ecc71;
-    font-weight: bold;
+    color: #2ecc71; /* Define a cor do link de registro como verde */
+    font-weight: bold; /* Destaca o link em negrito */
 }
 
 .modal-form .form-links a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+
+
+  
+  
+/* Media Queries para Responsividade */
+
+/* Telas de 769px a 1024px (Celulares, Tablets, Laptops Pequenos) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Ajusta o layout da seção principal para uma coluna (em vez de duas) */
+    .hero-main {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajusta a largura e o espaçamento do conteúdo da hero para telas menores */
+    .hero-contents {
+        width: 100%; /* Usa toda a largura disponível */
+        margin-left: 0; /* Remove a margem esquerda */
+        margin-top: 20px; /* Adiciona uma margem superior para separação */
+    }
+
+    /* Reduz o tamanho da fonte do nome da marca para caber melhor na tela */
+    .brandName {
+        font-size: 60px;
+    }
+
+    /* Reduz o tamanho da fonte do texto de descrição */
+    .hero-text {
+        font-size: 16px;
+    }
+
+    /* Ajusta o modal para uma coluna, tornando-o mais compacto */
+    .modal-content {
+        flex-direction: column; /* Organiza os elementos do modal em uma coluna */
+        width: 95%; /* Usa 95% da largura da tela */
+        min-height: auto; /* Ajusta a altura do modal para ser automática */
+    }
+
+    /* Ajusta o estilo da imagem lateral do modal para ficar mais redonda */
+    .modal-side-image {
+        border-radius: 20px 20px 0 0; /* Aplica bordas arredondadas no topo */
+        opacity: 1; /* Torna a imagem totalmente visível */
+    }
+}
+
+/* Telas de 1025px a 1200px (Desktops, Telas Grandes) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    /* Mantém duas colunas para o layout da hero (1fr cada) */
+    .hero-main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Ajusta o conteúdo da hero para ter um espaço adequado nas telas médias */
+    .hero-contents {
+        width: 80%; /* Limita a largura do conteúdo para 80% da tela */
+        margin-left: 40px; /* Adiciona uma margem esquerda para centralizar */
+    }
+
+    /* Aumenta o tamanho da fonte do nome da marca para telas médias */
+    .brandName {
+        font-size: 80px;
+    }
+
+    /* Aumenta o tamanho da fonte do texto de descrição */
+    .hero-text {
+        font-size: 18px;
+    }
+
+    /* Ajusta o modal para manter o layout em duas colunas */
+    .modal-content {
+        flex-direction: row; /* Organiza os elementos do modal em uma linha */
+        width: 80%; /* Reduz a largura do modal para 80% da tela */
+    }
+}
+
+/* Telas acima de 1200px (Desktops Grandes) */
+@media (min-width: 1201px) {
+    /* Mantém duas colunas para o layout da hero (1fr cada) */
+    .hero-main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Ajusta o conteúdo da hero para ter uma largura fixa em telas grandes */
+    .hero-contents {
+        width: 700px; /* Define uma largura fixa para o conteúdo */
+        margin-left: 80px; /* Adiciona uma margem esquerda maior */
+    }
+
+    /* Aumenta ainda mais o tamanho da fonte do nome da marca */
+    .brandName {
+        font-size: 100px;
+    }
+
+    /* Aumenta o tamanho da fonte do texto de descrição */
+    .hero-text {
+        font-size: 20px;
+    }
+
+    /* Define uma largura fixa para o modal em telas grandes */
+    .modal-content {
+        width: 800px; /* Define a largura do modal para 800px */
+    }
 }

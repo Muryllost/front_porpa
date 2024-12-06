@@ -36,7 +36,7 @@ const especie = document.querySelector('#especie').value;
 const nome = document.querySelector('#nome').value;
 
 
-const res = await fetch('http://192.168.1.17:3000/informacoes/plantas',{
+const res = await fetch('http://localhost:3000/informacoes/plantas',{
     method: "POST",
     headers: {
         "Content-Type": "application/json" // Adiciona o cabeçalho correto

@@ -1,0 +1,369 @@
+
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Define a fonte do texto para o corpo */
+  margin: 0; /* Remove a margem padrão do corpo */
+  background-color: #c0b8b8; /* Define a cor de fundo do corpo */
+}
+
+header {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Define a fonte para o cabeçalho */
+  display: flex; /* Usa flexbox para organizar os elementos filhos */
+  justify-content: space-between; /* Espaça os itens ao máximo dentro do cabeçalho */
+  align-items: center; /* Alinha os itens verticalmente no centro */
+  height: 80px; /* Define a altura do cabeçalho */
+  background-color: #000000; /* Define a cor de fundo do cabeçalho */
+}
+
+nav {
+  padding: 5px; /* Adiciona espaçamento interno ao menu de navegação */
+  display: flex; /* Usa flexbox para organizar os links de navegação */
+  justify-content: end; /* Alinha os links à direita */
+  gap: 20px; /* Define o espaçamento entre os links */
+  align-items: center; /* Centraliza os links verticalmente */
+  width: 50%; /* Define a largura do menu de navegação */
+}
+
+/* MODAL DAS ARVORES*/
+
+
+/* Estilo para o botão que abre o modal */
+.open-modal {
+  display: block; /* Torna o botão visível */
+  padding: 5px 10px; /* Define o padding interno */
+  background-color: #5d9058; /* Define a cor de fundo */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Torna as bordas arredondadas */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  font-size: 16px; /* Define o tamanho da fonte */
+}
+
+/* Estilo do modal */
+dialog {
+  border: none; /* Remove a borda */
+  border-radius: 10px; /* Torna as bordas do modal arredondadas */
+  max-width: 600px; /* Define a largura máxima do modal */
+  width: 90%; /* Define a largura como 90% da tela */
+  padding: 20px #5d9058; /* Define o padding interno e a cor de fundo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao modal */
+}
+
+/* Layout do modal */
+.modal-container {
+  display: flex; /* Torna o container flexível */
+  gap: 20px; /* Adiciona espaço entre os itens dentro do modal */
+}
+
+/* Estilo das colunas dentro do modal */
+.form-column {
+  flex: 1; /* Faz com que cada coluna ocupe o mesmo espaço */
+  display: flex; /* Torna a coluna flexível */
+  flex-direction: column; /* Organiza os itens da coluna de forma vertical */
+  gap: 15px; /* Adiciona espaço entre os itens */
+}
+
+/* Estilo para os inputs */
+input {
+  width: 100%; /* Faz com que o input ocupe toda a largura disponível */
+  padding: 8px; /* Adiciona padding interno */
+  border: 1px solid #ccc; /* Define uma borda cinza clara */
+  border-radius: 5px; /* Torna as bordas arredondadas */
+}
+
+/* Estilo para o botão de salvar */
+.submitModalBtn {
+  display: block; /* Torna o botão visível */
+  margin: 20px auto 0; /* Adiciona margem superior e centraliza o botão */
+  padding: 10px 20px; /* Adiciona padding interno */
+  background-color: #5d9058; /* Define a cor de fundo */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Torna as bordas arredondadas */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  font-size: 16px; /* Define o tamanho da fonte */
+}
+
+/* Estilo para o botão de fechar o modal */
+.close-modal {
+  top: 10px; /* Define a posição superior do botão de fechar */
+  right: 10px; /* Define a posição à direita */
+  position: absolute; /* Posiciona o botão de forma absoluta dentro do modal */
+  border-radius: 5px; /* Torna as bordas arredondadas */
+}
+
+/*dropdow*/
+/* Estilo do menu dropdown */
+.dropdown-menu {
+  position: relative; /* Posiciona o menu relativo ao seu container */
+  box-shadow: 0 0 2px black; /* Adiciona sombra ao menu */
+  background-color: #3333338f; /* Define a cor de fundo semitransparente */
+  display: none; /* Esconde o menu por padrão */
+  right: 5px; /* Posiciona o menu 5px à direita */
+}
+
+/* Estilo dos links dentro do dropdown */
+.dropdown-menu a {
+  display: block; /* Torna cada link um bloco */
+  color: black; /* Define a cor dos links como preto */
+}
+
+/* Exibe o menu dropdown quando o item for hover */
+.dropdown:hover .dropdown-menu {
+  display: block; /* Exibe o menu quando o mouse estiver sobre o dropdown */
+}
+
+
+section {
+  width: 100vw; /* Define a largura da seção como 100% da largura da janela */
+  height: auto; /* Permite que a altura se ajuste automaticamente */
+}
+
+#titulo {
+  text-align: center; /* Centraliza o texto */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Define a fonte */
+  justify-content: center; /* Centraliza o texto horizontalmente */
+  margin-bottom: 20px; /* Adiciona espaçamento inferior */
+  font-size: 60px; /* Define o tamanho da fonte */
+  font-weight: 900; /* Define o peso da fonte como muito grosso */
+}
+
+
+/* CARROSSEL */
+
+/* TAMANHO DA TELA DO CARROSSEL */
+
+.container {
+  height: 550px; /* Define a altura do carrossel */
+  width: 100%; /* Define a largura como 100% do container pai */
+  border-radius: 20px; /* Adiciona bordas arredondadas ao carrossel */
+  overflow: hidden; /* Oculta conteúdo que exceda os limites do container */
+  position: absolute; /* Permite posicionamento relativo a um elemento pai */
+  top: 25%; /* Define o deslocamento vertical do carrossel */
+  left: 7%; /* Define o deslocamento horizontal do carrossel */
+}
+
+/* POSICIONAMENTO DAS LABELS EM RELAÇÃO AO QUADRO CONTENT */
+
+.navigation {
+  position: absolute; /* Posiciona as labels em relação ao container pai */
+  bottom: 20px; /* Define a distância da parte inferior */
+  left: 36%; /* Define a distância da margem esquerda */
+  display: flex; /* Organiza as labels em linha usando flexbox */
+}
+
+/* TAMANHO E ESTILIZAÇÃO DAS LABELS */
+
+.bar {
+  width: 50px; /* Define a largura das labels */
+  height: 17px; /* Define a altura das labels */
+  border: 1px solid white; /* Adiciona uma borda branca */
+  margin: 10px; /* Adiciona espaço ao redor das labels */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+  cursor: pointer; /* Mostra o cursor de clique ao passar o mouse */
+  transition: 0.4s; /* Define uma transição suave ao interagir */
+}
+
+.bar:hover {
+  background-color: white; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* ESCONDER AS BOLINHAS DO INPUT:RADIO */
+
+.container input {
+  display: none; /* Oculta os inputs do tipo radio */
+}
+
+/* TODAS AS IMAGENS ESTÃO NA TELA, PORÉM NÃO VISÍVEIS */
+
+.slides {
+  display: flex; /* Exibe todas as imagens em linha usando flexbox */
+  width: 500%; /* Define a largura total como 5 vezes o container */
+  height: 100%; /* Define a altura como 100% do container */
+}
+
+/* TAMANHO DE CADA SLIDE */
+
+.slide {
+  width: 20%; /* Cada slide ocupa 20% da largura total */
+  transition: 0.6s; /* Adiciona uma transição suave ao mover */
+}
+
+/* TAMANHO DE CADA IMAGEM EM RELAÇÃO AO SLIDE */
+
+.slide img {
+  width: 100%; /* Ajusta a largura da imagem para preencher o slide */
+  height: 100%; /* Ajusta a altura da imagem para preencher o slide */
+}
+
+/* MOVIMENTAÇÃO DOS SLIDES */
+
+#slides1:checked~.s1 {
+  margin-left: 0; /* Mostra o primeiro slide */
+}
+
+#slides2:checked~.s1 {
+  margin-left: -20%; /* Mostra o segundo slide */
+}
+
+#slides3:checked~.s1 {
+  margin-left: -40%; /* Mostra o terceiro slide */
+}
+
+#slides4:checked~.s1 {
+  margin-left: -60%; /* Mostra o quarto slide */
+}
+
+#slides5:checked~.s1 {
+  margin-left: -80%; /* Mostra o quinto slide */
+}
+
+/* QUADRADOS */
+
+.quadrado {
+  width: 100%; /* Define a largura como 100% do container pai */
+  margin-top: 750px; /* Adiciona um grande espaçamento superior */
+  background-color: rgb(168, 168, 168); /* Define a cor de fundo */
+  padding: 20px; /* Adiciona espaçamento interno */
+  box-shadow: 0 2px 5px rgba(185, 14, 14, 0.1); /* Adiciona uma sombra ao quadrado */
+}
+
+.quadrado h1 {
+  text-align: center; /* Centraliza o texto do título */
+  font-size: 27px; /* Define o tamanho da fonte */
+}
+
+.blogs {
+  display: flex; /* Usa flexbox para organizar os itens */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 30px; /* Adiciona espaçamento entre os itens */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+}
+
+.blog-item {
+  margin-top: 30px; /* Adiciona espaçamento superior aos itens */
+  background-color: #5d9058; /* Define a cor de fundo dos itens */
+  padding: 25px; /* Adiciona espaçamento interno */
+  border-radius: 7px; /* Adiciona bordas arredondadas */
+  text-align: center; /* Centraliza o conteúdo */
+  width: 30%; /* Define a largura de cada item */
+  height: 500px; /* Define a altura de cada item */
+  box-shadow: 0 2px 5px rgb(0, 0, 0); /* Adiciona uma sombra ao redor dos itens */
+}
+
+.blog-item img {
+  width: 60%; /* Define a largura das imagens como 60% do item */
+  height: 60%; /* Define a altura das imagens como 60% do item */
+  object-fit: cover; /* Garante que as imagens mantenham suas proporções */
+}
+
+.blog-item h3 {
+  font-size: 30px; /* Define o tamanho da fonte do título */
+  color: #000000; /* Define a cor do texto do título */
+  margin: 15px 0 10px 0; /* Define os espaçamentos ao redor do título */
+}
+
+.blog-item p {
+  font-size: 25px; /* Define o tamanho da fonte do texto */
+  color: #000000; /* Define a cor do texto */
+}
+
+footer {
+  background-color: #000000; /* Define a cor de fundo do rodapé */
+  color: aliceblue; /* Define a cor do texto */
+  padding: 15px; /* Adiciona espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Define a fonte */
+  font-size: 20px; /* Define o tamanho da fonte */
+}
+
+footer a {
+  color: #51954e; /* Define a cor dos links no rodapé */
+  padding: 3px; /* Adiciona espaçamento interno aos links */
+  font-size: 20px; /* Define o tamanho da fonte dos links */
+}
+
+
+/* Media Queries para Responsividade */
+
+/* Telas de 769px a 1024px (Celulares, Tablets, Laptops Pequenos) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+      background-color: #e0dada; /* Exemplo de mudança de cor para telas menores */
+  }
+
+  header {
+      height: 70px; /* Diminuindo a altura do cabeçalho */
+  }
+
+  nav {
+      width: 60%; /* Ajustando a largura do menu de navegação */
+  }
+
+  .open-modal {
+      font-size: 14px; /* Ajustando o tamanho da fonte do botão modal */
+  }
+
+  .container {
+      height: 400px; /* Ajustando a altura do carrossel */
+      left: 5%; /* Ajustando a posição do carrossel */
+  }
+
+  .blog-item {
+      width: 45%; /* Ajustando a largura dos itens do blog */
+  }
+}
+
+/* Telas de 1025px a 1200px (Desktops, Telas Grandes) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  body {
+      background-color: #d1c6c6; /* Exemplo de mudança de cor para telas médias */
+  }
+
+  header {
+      height: 80px; /* Ajustando a altura do cabeçalho */
+  }
+
+  nav {
+      width: 50%; /* Ajustando a largura do menu de navegação */
+  }
+
+  .open-modal {
+      font-size: 16px; /* Ajustando o tamanho da fonte do botão modal */
+  }
+
+  .container {
+      height: 500px; /* Ajustando a altura do carrossel */
+      left: 7%; /* Ajustando a posição do carrossel */
+  }
+
+  .blog-item {
+      width: 30%; /* Ajustando a largura dos itens do blog */
+  }
+}
+
+/* Telas acima de 1200px (Desktops Grandes) */
+@media (min-width: 1201px) {
+  body {
+      background-color: #c0b8b8; /* Mantendo a cor original para telas grandes */
+  }
+
+  header {
+      height: 80px; /* Mantendo a altura do cabeçalho */
+  }
+
+  nav {
+      width: 40%; /* Ajustando a largura do menu de navegação */
+  }
+
+  .open-modal {
+      font-size: 18px; /* Ajustando o tamanho da fonte do botão modal */
+  }
+
+  .container {
+      height: 550px; /* Mantendo a altura do carrossel */
+      left: 7%; /* Mantendo a posição do carrossel */
+  }
+
+  .blog-item {
+      width: 30%; /* Mantendo a largura dos itens do blog */
+  }
+}

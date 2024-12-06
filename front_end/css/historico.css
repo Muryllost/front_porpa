@@ -1,0 +1,121 @@
+/* Estilo Geral */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  background-image: url('/img/fundo-home.png'); /* Substitua 'sua-imagem.jpg' pelo caminho da imagem */
+  background-repeat: no-repeat;
+  background-size: cover; /* Faz com que a imagem cubra todo o fundo */
+  background-position: center; /* Centraliza a imagem no fundo */
+  color: #333;
+}
+
+
+header {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Define a fonte para o cabeçalho */
+  display: flex; /* Usa flexbox para organizar os elementos filhos */
+  justify-content: space-between; /* Espaça os itens ao máximo dentro do cabeçalho */
+  align-items: center; /* Alinha os itens verticalmente no centro */
+  height: 80px; /* Define a altura do cabeçalho */
+  background-color: #000000; /* Define a cor de fundo do cabeçalho */
+}
+
+header img {
+  height: 110px;
+  width: 110px;
+}
+
+nav {
+  padding: 5px; /* Adiciona espaçamento interno ao menu de navegação */
+  display: flex; /* Usa flexbox para organizar os links de navegação */
+  justify-content: end; /* Alinha os links à direita */
+  gap: 20px; /* Define o espaçamento entre os links */
+  align-items: center; /* Centraliza os links verticalmente */
+  width: 50%; /* Define a largura do menu de navegação */
+}
+
+
+
+/* Container Principal */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Estilo dos Cards */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.card p {
+  font-size: 1em;
+  color: #666;
+  margin: 5px 0;
+}
+
+
+
+/*dropdow*/
+/* Estilo do menu dropdown */
+.dropdown-menu {
+  position: relative; /* Posiciona o menu relativo ao seu container */
+  box-shadow: 0 0 2px black; /* Adiciona sombra ao menu */
+  background-color: #3333338f; /* Define a cor de fundo semitransparente */
+  display: none; /* Esconde o menu por padrão */
+  right: 5px; /* Posiciona o menu 5px à direita */
+}
+
+/* Estilo dos links dentro do dropdown */
+.dropdown-menu a {
+  display: block; /* Torna cada link um bloco */
+  color: black; /* Define a cor dos links como preto */
+}
+
+/* Exibe o menu dropdown quando o item for hover */
+.dropdown:hover .dropdown-menu {
+  display: block; /* Exibe o menu quando o mouse estiver sobre o dropdown */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .modal-container {
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+}

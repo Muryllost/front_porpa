@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fauna - Pantanal</title>
+    <link rel="stylesheet" href="../css/fauna.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+      <header>
+        <img src="/img/logobranca.png" alt="" width="110" height="110">
+        
+        <nav>
+          <button class="open-modal" data-modal="modalCadastro">Adicionar Árvore</button>
+          <dialog id="modalCadastro">
+            <button class="close-modal" data-modal="modalCadastro">X</button>
+            <div class="modal-container">
+            <!-- Primeira coluna -->
+            <div class="form-column">
+              <label for="domain">Domínio:</label>
+              <input type="text" id="dominio" placeholder="Ex: Eukarya"  required/>
+          
+              <label for="kingdom">Reino:</label>
+              <input type="text" id="reino" placeholder="Ex: Plantae"  required/>
+          
+              <label for="phylum">Filo:</label>
+              <input type="text" id="filo" placeholder="Ex: Magnoliophyta"  required/>
+          
+              <label for="class">Classe:</label>
+              <input type="text" id="classe" placeholder="Ex: Magnoliopsida"  required/>
+    
+              <label for="class">Nome:</label>
+              <input type="text" id="nome" placeholder="Ex: Pau-Brasil"  required/>
+            </div>
+          
+            <!-- Segunda coluna -->
+            <div class="form-column">
+              <label for="origin">Origem:</label>
+              <input type="text" id="origem" placeholder="Ex: Nativa do Brasil"  required/>
+          
+              <label for="family">Família:</label>
+              <input type="text" id="familia" placeholder="Ex: Fabaceae"  required/>
+          
+              <label for="genus">Gênero:</label>
+              <input type="text" id="genero" placeholder="Ex: Caesalpinia"  required/>
+          
+              <label for="species">Espécie:</label>
+              <input type="text" id="especie" placeholder="Ex: Caesalpinia echinata"  required/>
+    
+              <label class="Imagem" for="imageUpload">Imagem:</label>
+              <input class="Imagem" type="file" id="imageUpload" accept="image/*"/>
+            </div>
+            </div>
+        
+      
+            <!-- Botão Salvar -->
+            <button class="submitModalBtn" id="cadastrar">Salvar 🌟</button>
+          </dialog>
+
+          <div class="dropdown">
+            <button id="menu" class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../html/home.html">Home</a></li>
+                <li><a class="dropdown-item" href="../html/noticias.html">Noticias</a></li>
+                <li><a class="dropdown-item" href="../html/historico.html">histórico</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <h1 id="titulo">FAUNA</h1>
+    
+    <section>
+    <div class="container">
+        <div class="slides">
+          <input type="radio" name="radio" id="slides1" checked />
+          <input type="radio" name="radio" id="slides2" />
+          <input type="radio" name="radio" id="slides3" />
+          <input type="radio" name="radio" id="slides4" />
+          <input type="radio" name="radio" id="slides5" />
+  
+          <div class="slide s1">
+            <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/nationalgeographic2686450_0.jpg?w=1600" alt="Guerreiro" />
+          </div>
+          <div class="slide">
+            <img src="https://www.infoescola.com/wp-content/uploads/2016/08/arara-azul-635338985.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://www.infoescola.com/wp-content/uploads/2018/03/tamandu%C3%A1-bandeira_81890218.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://static.todamateria.com.br/upload/54/07/54079865ea5f6-animais-do-pantanal.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://jeffersondealmeida.com.br/wp-content/uploads/2020/09/lobo-guara-oncafari-1--scaled.jpg" alt="" />
+          </div>
+        </div>
+        <div class="navigation">
+          <label class="bar" for="slides1"></label>
+          <label class="bar" for="slides2"></label>
+          <label class="bar" for="slides3"></label>
+          <label class="bar" for="slides4"></label>
+          <label class="bar" for="slides5"></label>
+        </div>
+      </div>
+    </section>
+
+    <div class="quadrado">
+        <div class="explicacao">
+            <h1>A fauna do Pantanal é extremamente diversa e abriga
+                quase todas as espécies de animais encontradas no 
+                Brasil. Isso corre devido a grande influência que o bioma sofre de três 
+                biomas brasileiros: Floresta Amazônica, Cerrado e Mata Atlântica, além de conter poucos requícios da caatinga. 
+                Segundo a Agência de Notícias do IBGE, o Pantanal contém: </h1>
+        </div>
+
+        <div class="blogs">
+            <div class="blog-item">
+                <a href="https://www.sospantanal.org.br/wp-content/uploads/2020/05/WhatsApp-Image-2020-05-12-at-12.11.26.jpeg">
+                    <img src="https://www.icmbio.gov.br/esectaiama/images/stories/biodiversidade/capivara.jpg"
+                        alt="Alexandre Bossi"></a>
+                
+                <h3>MAMÍFEROS</h3>
+                <p>132 espécies de mamíferos: anta, capivara, veado, onça-pintada, morcego.</p>
+            </div>
+
+            <div class="blog-item">
+                <a href="https://www.sospantanal.org.br/wp-content/uploads/2020/05/WhatsApp-Image-2020-05-11-at-22.14.21.jpeg"
+                    target="_blank">
+                    <img src="https://ambientes.ambientebrasil.com.br/wp-content/uploads/2020/11/jacare-2645898_1280-1024x682.jpg"
+                        alt="Felipe Dias">
+                </a>
+                <h3>RÉPTEIS</h3>
+                <p>85 espécies de répteis, sendo os jacarés com a maior variedade.</p>
+            </div>
+
+            <div class="blog-item">
+                <a href="https://www.sospantanal.org.br/wp-content/uploads/2020/05/WhatsApp-Image-2020-05-12-at-12.50.26.jpeg"
+                    target="_blank">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWUD8GPmg7zMP_mDlum2d3XxP2G5PiuM7PuQ&s"
+                        alt="Leonardo Gomes">
+                </a>
+                <h3>AVES</h3>
+                <p>463 espécies de aves: tucano, arara, tuiuiú, carão</p>
+            </div>
+
+            <div class="blog-item">
+                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo7VstVHyXelSnkFaVa25gAmuCd4FHc6d8QC2kBFQBkQ1P1fU9ZrAqWaJwA2gIpyftkkk&usqp=CAU">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo7VstVHyXelSnkFaVa25gAmuCd4FHc6d8QC2kBFQBkQ1P1fU9ZrAqWaJwA2gIpyftkkk&usqp=CAU" alt="Novo Animal 1">
+                </a>
+                <h3>ANFÍBIOS</h3>
+                <p>35 espécies de anfíbios, como a rã verde</p> 
+            </div>
+
+            <div class="blog-item">
+                <a href="https://turismo.b-cdn.net/wp-content/uploads/2024/01/Pacu-ou-Piaractus-mesopotamicus.jpg">
+                    <img src="https://turismo.b-cdn.net/wp-content/uploads/2024/01/Pacu-ou-Piaractus-mesopotamicus.jpg" alt="Novo Animal 2">
+                </a>
+                <h3>PEIXES</h3>
+                <p>263 espécies de peixes: pacu, pintado, bagre, traíra, dourado, piau, jaú (o maior da região).</p>
+            </div>
+        </div>
+    </div> 
+ <footer class="footer">
+    <div class="footer-content">
+      <p>Explore o bioma do Pantanal e fique por dentro das notícias sobre este bioma.</p>
+      <div class="social-icons">
+        <a href="#facebook" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+          </svg></a>
+        <a href="#whatsapp" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+        </svg></a>
+        <p>© 2024 Bioma Pantanal.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/modal-Arvore.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

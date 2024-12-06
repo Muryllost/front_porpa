@@ -9,10 +9,7 @@ document.querySelector("#cadastrarContaModal form").addEventListener("submit", a
     const senha = document.querySelector("#senhaCadastro").value;
     const confirmacao = document.querySelector("#senhaConfirmacao").value;
 
-    if (!nome || !email || !senha || !confirmacao) {
-        alert("Preencha todos os campos!", "warning");
-        return;
-    }
+  
 
     if (senha !== confirmacao) {
         alert("As senhas não coincidem!", "warning");
@@ -51,7 +48,7 @@ document.querySelector("#login").addEventListener("click", async (event) => {
     if (usuario != '' && senha != '') {
        
         try {
-            const response = await fetch(`http://192.168.1.28:3000/login/${usuario}/${senha}`);
+            const response = await fetch(`http://localhost:3000/login/${usuario}/${senha}`);
             if (response.status == 200) {
 
                 window.location.replace("../html/noticias.html"); // Redireciona para a página home

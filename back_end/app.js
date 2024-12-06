@@ -30,6 +30,8 @@ app.get('/login/:usuario/:senha',async (req, res)=>{
     
 });
 
+
+
 //cadastro de usuario: Funcional
 app.post('/usuario/email/senha', async (req, res)=>{
     try{
@@ -42,8 +44,6 @@ app.post('/usuario/email/senha', async (req, res)=>{
         return res.status(500).json('erro ao cadastrar usuario')
     }
 })
-
-
 
 
 
@@ -84,7 +84,7 @@ app.post('/informacoes/plantas', async (req, res)=>{
 
 
 
-//pesquisa das plantas: Funcional
+//pesquisa das plantas: Funcional - nao iremos fazer isso,pois o js é muito complexo
 app.get('/plantas/:especie',async (req, res)=>{
 
     try{
@@ -103,8 +103,6 @@ app.get('/plantas/:especie',async (req, res)=>{
     }
     
 });
-
-
 
 
 
